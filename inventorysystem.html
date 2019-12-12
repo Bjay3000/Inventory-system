@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Inventory System</title>
+</head>
+<body>
+<h1 style="text-align: center;">MY INVENTORY SYSTEM</h1>
+    <table border="10%" style="background-color: violet; margin-left: 100px;">
+    	<th style="height: 50px; width: 200px;">PRODUCT</th>
+    	<th style="height: 50px; width: 200px;">NAME</th>
+    	<th style="height: 50px; width: 200px;">QUANTITY AVAILABLE</th>
+    	<th style="height: 50px; width: 200px;">PRICE</th>
+    	<th style="height: 50px; width: 200px;">ORDER</th>
+    	<th style="height: 50px; width: 200px;">TOTAL AMOUNT</th>
+    	<tr>
+    		<td style="height: 50px; width: 200px;"><img src=""></td>
+    		<td style="height: 50px; width: 200px;">PHONE</td>
+    		<td><input type="text" id="qa1" disabled="" value="20" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="p1" disabled="" value="50000" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="o1" style="height: 50px; width: 200px;" onkeyup="first()" ></td>
+    		<td><input type="text" id="ta1" style="height: 50px; width: 200px;" disabled=""></td>
+    	</tr>
+    	<tr>
+    		<td style="height: 50px; width: 200px;"></td>
+    		<td style="height: 50px; width: 200px;">LAPTOP</td>
+    		<td><input type="text" id="qa2" disabled="" value="30" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="p2" disabled="" value="120000" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="o2" style="height: 50px; width: 200px;" onkeyup="second()"></td>
+    		<td><input type="text" id="ta2" style="height: 50px; width: 200px;" disabled=""></td>
+    	</tr>
+    	<tr>
+    		<td style="height: 50px; width: 200px;"></td>
+    		<td style="height: 50px; width: 200px;">BAG</td>
+    		<td><input type="text" id="qa3" disabled="" value="50" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="p3" disabled="" value="50000" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="o3" style="height: 50px; width: 200px;" onkeyup="third()"></td>
+    		<td><input type="text" id="ta3" style="height: 50px; width: 200px;" disabled=""></td>
+    	</tr>
+    	<tr>
+    		<td style="height: 50px; width: 200px;"></td>
+    		<td style="height: 50px; width: 200px;">SHOE</td>
+    		<td><input type="text" id="qa4" disabled="" value="100" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="p4" disabled="" value="5000" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="o4" style="height: 50px; width: 200px;" onkeyup="fourth()"></td>
+    		<td><input type="text" id="ta4" style="height: 50px; width: 200px;" disabled=""></td>
+    	</tr>
+    	<tr>
+    		<td style="height: 50px; width: 200px;"></td>
+    		<td style="height: 50px; width: 200px;">CHARGER</td>
+    		<td><input type="text" id="qa5" disabled="" value="100" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="p5" disabled="" value="2000" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="o5" style="height: 50px; width: 200px;" onkeyup="fifth()"></td>
+    		<td><input type="text" id="ta5" style="height: 50px; width: 200px;" disabled=""></td>
+    	</tr>
+    	<tr>
+    		<td style="height: 50px; width: 200px;"></td>
+    		<td style="height: 50px; width: 200px;">HOUSE</td>
+    		<td><input type="text" id="qa6" disabled="" value="50" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="p6" disabled="" value="200000" style="height: 50px; width: 200px;"></td>
+    		<td><input type="text" id="o6" style="height: 50px; width: 200px;" onkeyup="six()"></td>
+    		<td><input type="text" id="ta6" style="height: 50px; width: 200px;" disabled=""></td>
+    	</tr>
+    	<tr style="height: 50px; width: 600px; text-align: center;">
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td></td>
+    	<td style="font-size: 50px;">GRAND TOTAL</td>
+    	<td ><input type="text" style="height: 120px; width: 200px; font-size: 30px;" onkeyup="gtotal()" id="tot"></td>
+    	</tr>
+    </table>
+</body>
+</html>
+<script type="text/javascript">
+	function first(){
+
+		qa1.value = qa1.value - o1.value;
+		ta1.value = o1.value * p1.value;
+		gtotal();
+       }
+       function second() {
+       	qa2.value = qa2.value - o2.value;
+       	ta2.value = o2.value * p2.value;
+       	gtotal();
+       }
+       function third() {
+       	qa3.value = qa3.value - o3.value;
+       	ta3.value = o3.value * p3.value;
+       	gtotal();
+       }
+       function fourth() {
+       	qa4.value = qa4.value - o4.value;
+       	ta4.value = o4.value * p4.value;
+       	gtotal();
+       }
+       function fifth() {
+       	qa5.value = qa5.value - o5.value;
+       	ta5.value = o5.value * p5.value;
+       	gtotal();
+       }
+       function six() {
+       	qa6.value = qa6.value - o6.value;
+       	ta6.value = o6.value * p6.value;
+       	gtotal();
+       }
+       function gtotal() {
+       tot.value = parseInt(ta1.value) + parseInt(ta2.value) + parseInt(ta3.value) + parseInt(ta4.value) + parseInt(ta5.value) + (ta6.value);
+       }
+
+			</script>
